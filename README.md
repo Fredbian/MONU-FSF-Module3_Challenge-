@@ -11,4 +11,5 @@ lowercase, uppercase or symbol.
  ![](images%5Cfull_screenshot_2.png) 
 
 ## URL Links:
-
+* Github URL: https://github.com/Fredbian/MONU-FSF-Module3_Challenge-
+* Deployed URL: https://fredbian.github.io/MONU-FSF-Module3_Challenge-/ 
