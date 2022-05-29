@@ -18,11 +18,35 @@ function passwordGenerate () {
     }
 
     /* This is the array of our characters */   
-    let includeNumbers = prompt('Including Numbers? Please ONLY enter "yes" or "no"!')
-
-    let includeUppercase = prompt('Including Uppercase? Please ONLY enter "yes" or "no"!')
-
-    let includeSymbols = prompt('Including Symbols? Please ONLY enter "yes" or "no"!')
+    while (true) {
+        includeNumbers = prompt('Including Numbers? Please ONLY enter "yes" or "no"!')
+        if (includeNumbers !== 'yes' && includeNumbers !== 'no') {
+            alert (`Please ONLY enter "yes" or "no"!`)
+        } else if (includeNumbers === 'yes' || includeNumbers === 'no') {
+            alert (`Is your password including numbers? Your answer is '${includeNumbers}'.`)
+            break
+        }        
+    }
+    
+    while (true) {
+        includeUppercase = prompt('Including Uppercase? Please ONLY enter "yes" or "no"!')
+        if (includeUppercase !== 'yes' && includeUppercase !== 'no') {
+            alert (`Please ONLY enter "yes" or "no"!`)
+        } else if (includeUppercase === 'yes' || includeUppercase === 'no') {
+            alert (`Is your password including uppercase? Your answer is '${includeUppercase}'.`)
+            break
+        }        
+    }
+    
+    while (true) {
+        includeSymbols = prompt('Including Symbols? Please ONLY enter "yes" or "no"!')
+        if (includeSymbols !== 'yes' && includeSymbols !== 'no') {
+            alert (`Please ONLY enter "yes" or "no"!`)
+        } else if (includeSymbols === 'yes' || includeSymbols === 'no') {
+            alert (`Is your password including symbols? Your answer is '${includeSymbols}'.`)
+            break
+        }        
+    }
 
     let UPPERCASE_CHAR_CODES = arrayFromCharCodeLowToHigh(65, 90)
     let LOWERCASE_CHAR_CODES = arrayFromCharCodeLowToHigh(97, 122)
