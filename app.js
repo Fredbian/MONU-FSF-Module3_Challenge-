@@ -4,23 +4,26 @@ document.getElementById("generate").addEventListener("click", passwordGenerate)
 function passwordGenerate () {
     // After click 'Submit' button, let customer input, Get value from customer input */
     while (true) {
-        passwordLength = +prompt('Please Enter Your Password Length (the number must be between 8 to 128):')
+        passwordLength = Number(prompt('Please Enter Your Password Length (the number must be between 8 to 128):'))
         if (passwordLength < 8) {
-        alert ('The number must be greater than 8!')
+            alert('The number must be greater than 8!')
         } else if (passwordLength > 128) {
-            alert ('The number must be less than 128!')
-        } else {
-        alert (`Your Password Length is: ${passwordLength}`)
-        break    
-        }                              
+            alert('The number must be less than 128!')
+        } else if (isNaN(passwordLength)) {
+            alert(`Please only enter a NUMBER between 8 to 128!`)
+        } else {     
+            alert(`Your Password Length is: ${passwordLength}`)
+            break
+        }
     }
 
     /* This is the array of our characters */   
-    includeNumbers = prompt('Including Numbers? Please input "yes" or "no".')
+    let includeNumbers = prompt('Including Numbers? Please ONLY enter "yes" or "no"!')
 
-    includeUppercase = prompt('Including Uppercase? Please input "yes" or "no".')
+    let includeUppercase = prompt('Including Uppercase? Please ONLY enter "yes" or "no"!')
 
-    includeSymbols = prompt('Including Symbols? Please input "yes" or "no".')
+    let includeSymbols = prompt('Including Symbols? Please ONLY enter "yes" or "no"!')
+
     let UPPERCASE_CHAR_CODES = arrayFromCharCodeLowToHigh(65, 90)
     let LOWERCASE_CHAR_CODES = arrayFromCharCodeLowToHigh(97, 122)
     let NUMBER_CHAR_CODES = arrayFromCharCodeLowToHigh(48, 57)
