@@ -7,8 +7,10 @@ lowercase, uppercase or symbol.
 * After all questions are answered, it will generate a password based on answers.
 
 ## Screenshot:
- ![](images%5Cfull_screenshot_1.png) 
- ![](images%5Cfull_screenshot_2.png) 
+ * Screenshot1:
+ https://github.com/Fredbian/MONU-FSF-Module3_Challenge-/blob/main/images/full_screenshot_1.png
+ * Screenshot2:
+ https://github.com/Fredbian/MONU-FSF-Module3_Challenge-/blob/main/images/full_screenshot_2.png
 
 ## URL Links:
 * Github URL: https://github.com/Fredbian/MONU-FSF-Module3_Challenge-
