@@ -48,6 +48,15 @@ function passwordGenerate () {
         }        
     }
 
+    while (true) {
+        includeLowercase = prompt('Including Lowercase? Please ONLY enter "yes" or "no"!')
+        if (includeLowercase !== 'yes' && includeLowercase !== 'no') {
+            alert (`Please ONLY enter "yes" or "no"!`)
+        } else if (includeLowercase === 'yes' || includeLowercase === 'no') {
+            alert (`Is your password including symbols? Your answer is '${includeLowercase}'.`)
+            break
+        }        
+    }
     let UPPERCASE_CHAR_CODES = arrayFromCharCodeLowToHigh(65, 90)
     let LOWERCASE_CHAR_CODES = arrayFromCharCodeLowToHigh(97, 122)
     let NUMBER_CHAR_CODES = arrayFromCharCodeLowToHigh(48, 57)
@@ -68,8 +77,12 @@ function passwordGenerate () {
     }
 
     /* This is Generate Password Function */ 
-    let charCodes = LOWERCASE_CHAR_CODES
+    let charCodes = []
 
+    if (includeLowercase === 'yes') {
+        charCodes = charCodes.concat(LOWERCASE_CHAR_CODES)
+    }
+   
     if (includeUppercase === 'yes') {
         charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
     }
